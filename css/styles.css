@@ -1,0 +1,38 @@
+body,
+h1,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* ==================
+ヘッダー
+================== */
+header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../img/patrick-tomasso-GXXYkSwndP4-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+header > ul {
+  display: flex;
+}
+header > ul > li {
+  margin-left: 15px;
+}
+header > h1 {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
