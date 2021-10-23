@@ -1,14 +1,29 @@
 body,
 h1,
-ul {
+h2,
+h3,
+ul,
+li,
+dl,
+dt,
+dd {
   margin: 0;
   padding: 0;
 }
-ul {
+li {
   list-style: none;
 }
 a {
   text-decoration: none;
+}
+body {
+  padding: 0 16px;
+}
+/* ==================
+sectionタイトル
+================== */
+.sectionTitle {
+  text-align: center;
 }
 
 /* ==================
@@ -24,6 +39,7 @@ header {
 }
 header > ul {
   display: flex;
+  justify-content: flex-end;
 }
 header > ul > li {
   margin-left: 15px;
@@ -34,5 +50,61 @@ header > h1 {
   top: 50%;
   left: 0;
   right: 0;
+  text-align: center;
+}
+
+/* ==================
+メニュー
+================== */
+.subtitle {
+  text-align: center;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+.menu-content {
+  display: flex;
+}
+.menuItem {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.menuItem:first-child {
+  border-right: 1px dotted rgb(85, 84, 84);
+}
+.menuItem > dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menuItem > dl > dt {
+  margin-bottom: 25px;
+  width: 80%;
+  border-bottom: 1px dotted rgb(85, 84, 84);
+  text-align: left;
+}
+.menuItem > dl > dd {
+  width: 20%;
+  padding-top: 8px;
+}
+
+/* ==================
+about
+================== */
+.aboutComment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 50px;
+  grid-column-gap: 50px;
+}
+
+.readMore {
+  margin: 0 auto;
+  width: 100px;
+  text-align: center;
+}
+
+footer {
   text-align: center;
 }
