@@ -16,13 +16,47 @@ li {
 a {
   text-decoration: none;
 }
+
+/* ==================
+フォント
+================== */
 body {
   padding: 0 16px;
+  font-family: "Helvetica", "Neue", "Arial", "Hiragino", "Sans", "Hiragino",
+    "Kaku", "Gothic", "ProN", "Meiryo", sans-serif;
 }
-/* ==================
-sectionタイトル
-================== */
+h1 {
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 0px 0px 10px #fff;
+}
 
+h2 {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 0px 0px 10px #fff;
+}
+
+h3 {
+  border-bottom: red 3px solid;
+  display: inline-block;
+  font-size: 2rem;
+}
+a {
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 0px 0px 10px #000;
+}
+li,
+p {
+  font-size: 0.8rem;
+}
+.readMore {
+  font-size: 1.2rem;
+}
+section {
+  text-align: center;
+}
 /* ==================
 パララックス
 ================== */
@@ -89,6 +123,7 @@ header > h1 {
 .menuItem {
   width: 50%;
   padding: 0 20px;
+  text-align: center;
 }
 
 .menuItem:first-child {
@@ -121,18 +156,25 @@ about
 
 .readMore {
   margin: 0 auto;
-  width: 100px;
+  width: 200px;
   text-align: center;
 }
-
-footer {
-  text-align: center;
+#about > .wrapper > ul > li {
+  text-align: left;
 }
-
 /* ==================
 LOCATION
 ================== */
-
 iframe {
   width: 100%;
+}
+#location > .wrapper > p {
+  text-align: left;
+}
+
+/* ==================
+footer
+================== */
+footer {
+  text-align: center;
 }
