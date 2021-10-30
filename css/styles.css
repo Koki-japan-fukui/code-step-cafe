@@ -21,7 +21,6 @@ a {
 フォント
 ================== */
 body {
-  padding: 0 16px;
   font-family: "Helvetica", "Neue", "Arial", "Hiragino", "Sans", "Hiragino",
     "Kaku", "Gothic", "ProN", "Meiryo", sans-serif;
 }
@@ -38,11 +37,16 @@ h2 {
 }
 
 h3 {
+  margin: 40px;
   border-bottom: red 3px solid;
   display: inline-block;
   font-size: 2rem;
 }
 a {
+  font-size: 0.8rem;
+  color: #000;
+}
+nav > ul > li > a {
   font-size: 1rem;
   color: #fff;
   text-shadow: 0px 0px 10px #000;
@@ -54,22 +58,18 @@ p {
 .readMore {
   font-size: 1.2rem;
 }
+/* ==================
+セクション
+================== */
 section {
   text-align: center;
 }
 /* ==================
 パララックス
 ================== */
-#menu > .parallaxContent {
-  background-image: url("../img/nathan-dumlao-zUNs99PGDg0-unsplash.jpg");
-}
-#about > .parallaxContent {
-  background-image: url("../img/coffee-g4f622afd2_1920.jpg");
-}
-#location > .parallaxContent {
-  background-image: url("../img/street-cafe-g1981f9639_1920.jpg");
-}
+
 .parallaxContent {
+  margin: 30px 0;
   width: 100%;
   height: 40vh;
   background-position: center center;
@@ -80,22 +80,32 @@ section {
   justify-content: center;
   align-items: center;
 }
+#menu > .parallaxContent {
+  background-image: url("../img/nathan-dumlao-zUNs99PGDg0-unsplash.jpg");
+}
+#about > .parallaxContent {
+  background-image: url("../img/coffee-g4f622afd2_1920.jpg");
+}
+#location > .parallaxContent {
+  background-image: url("../img/street-cafe-g1981f9639_1920.jpg");
+}
 /* ==================
 ヘッダー
 ================== */
 header {
-  width: 100%;
+  max-width: 100%;
+  padding: 20px 40px;
   min-height: 100vh;
   background-image: url("../img/patrick-tomasso-GXXYkSwndP4-unsplash.jpg");
   background-size: cover;
   background-position: center center;
   position: relative;
 }
-header > ul {
+header > nav > ul {
   display: flex;
   justify-content: flex-end;
 }
-header > ul > li {
+header > nav > ul > li {
   margin-left: 15px;
 }
 header > h1 {
@@ -155,10 +165,68 @@ about
 }
 
 .readMore {
-  margin: 0 auto;
-  width: 200px;
-  text-align: center;
+  margin: 50px;
 }
+.readMore > a {
+  width: 160px;
+  height: 45px;
+  display: inline-block;
+  position: relative;
+  line-height: 3.5;
+}
+
+.readMore > a:before,
+.readMore > a:after {
+  content: "";
+  width: 2px;
+  height: 20%;
+  background-color: red;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.readMore > a:hover:before,
+.readMore > a:hover:after {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+}
+.readMore > a > span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.readMore > a > span:before,
+.readMore > a > span:after {
+  content: "";
+  width: 10%;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.readMore > a > span:hover:before,
+.readMore > a > span:hover:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+}
+.readMore > a:before,
+.readMore > a > span:before {
+  top: 0;
+  left: 0;
+}
+.readMore > a:after,
+.readMore > a > span:after {
+  bottom: 0;
+  right: 0;
+}
+
 #about > .wrapper > ul > li {
   text-align: left;
 }
@@ -176,5 +244,26 @@ iframe {
 footer
 ================== */
 footer {
+  margin-top: 150px;
   text-align: center;
+}
+
+@media screen and (max-width: 745px) {
+  .menu-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .menuItem {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .menuItem:first-child {
+    border-right: none;
+  }
+  .aboutComment {
+    display: flex;
+    flex-wrap: wrap;
+    grid-row-gap: 20px;
+  }
 }
